@@ -1,1 +1,13 @@
-1- 
+
+Wednesday, 24 November 2021
+Assignment-2 Tasks Breakdown
+
+This project calculates road tolls based on type of vehicle and to specific time period (rush hour) during 24 hours. Following is the list of tasks that to build the project.
+
+* Create Enum class for Unit of time periods representing "RushhourAM" and "RushhourPM".
+* Having "Vehicle" as interface class with two methods which can be implemented in two classes "Car" and "MC".
+* "TollCalculator" class for one day toll calculation
+        * Main method takes two arguments, Vehicle and List of datetime
+        * Looping through datetime list, check for rush hour time period with 18 kr fee, calculating total fee (11 kr for Car / 8 kr for MC) and print out the total fee with the condition of 60 kr max fee per day
+* Input for a type of vehicle
+* ArrayList of datetime as input
