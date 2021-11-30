@@ -6,7 +6,7 @@ public enum TimePeriod {
     RushHourAM {
         @Override
         public boolean TimeRange(LocalTime time) {
-            LocalTime start = LocalTime.parse("06:59");
+            LocalTime start = LocalTime.parse("07:59");
             LocalTime end = LocalTime.parse("09:01");
             //LocalTime s = LocalTime.of(7, 00);
             return time.isAfter(start) && time.isBefore(end) ? true : false;
