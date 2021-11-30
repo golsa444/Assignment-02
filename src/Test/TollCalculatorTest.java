@@ -9,6 +9,7 @@ import org.junit.Test;
 import org.junit.Assert.*;
 import org.junit.Assert;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -27,15 +28,17 @@ public class TollCalculatorTest {
         LocalDateTime e4 = LocalDateTime.of(2033, 11, 5, 10, 0, 0);
         LocalDateTime e5 = LocalDateTime.of(2033, 11, 5, 15, 0, 0);
         LocalDateTime e6 = LocalDateTime.of(2033, 11, 5, 16, 30, 0);
-
+        LocalDateTime e7 = LocalDateTime.of(2033, 11, 5, 16, 30, 0);
+        LocalDate d = LocalDate.now();
         List<LocalDateTime> list = new ArrayList<>() {
         };
         list.add(e3);
         list.add(e4);
         list.add(e5);
         list.add(e6);
+        list.add(e7);
 
-        t.GetTollFee(car, list);
+        t.GetTollFee(car, list, d);
         //t.GetTollFee(mc, list);
     }
 
