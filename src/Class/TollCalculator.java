@@ -3,7 +3,6 @@ package Class;
 import Enum.TimePeriod;
 import Interface.Vehicle;
 
-import java.sql.Time;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.List;
@@ -19,25 +18,26 @@ public class TollCalculator {
         for (LocalTime time : times) {
             if (TimePeriod.RushHourAM.TimeRange(time) || TimePeriod.RushHourPM.TimeRange(time)) {
                 totalFee = 18;
-                System.out.println("total: " + totalFee);
+                System.out.println("fee: " + totalFee);
             } else if (vehicle.GetVehicleType() == "Car") {
                 totalFee = vehicle.CalculateFee();
-                System.out.println("total: " + totalFee);
+                System.out.println("fee: " + totalFee);
             } else if (vehicle.GetVehicleType() == "MC") {
                 totalFee = vehicle.CalculateFee();
-                System.out.println("total: " + totalFee);
+                System.out.println("fee: " + totalFee);
             }
-            maxFee += totalFee;
+            int fee = maxFee += totalFee;
+
             if (maxFee > 60) {
-                totalFee = 60;
+                maxFee = 60;
             }
+            System.out.println("total: " + fee);
         }
         System.out.println("Max: " + maxFee);
 
-        System.out.println("total: " + totalFee);
-
     }
 }
+
 
 
 
