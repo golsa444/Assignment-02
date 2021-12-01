@@ -23,7 +23,7 @@ public class Main {
         Car c = new Car();
         MC c1 = new MC();
         TollCalculator t = new TollCalculator();
-        LocalDateTime e = LocalDateTime.of(2020, 11, 5, 7, 0, 0);
+        LocalDateTime e = LocalDateTime.of(2022, 11, 5, 7, 0, 0);
         LocalDateTime e1 = LocalDateTime.of(2020, 11, 5, 10, 0, 0);
         LocalDateTime e2 = LocalDateTime.of(2020, 11, 5, 16, 0, 0);
         LocalDateTime e3 = LocalDateTime.of(2020, 11, 5, 16, 22, 0);
@@ -37,9 +37,9 @@ public class Main {
         list.add(e3);
         list.add(e4);
 
-        LocalDate d = LocalDate.of(2021, 12, 5);
-        LocalDate d1 = LocalDate.now();
+       /* LocalDate d = LocalDate.of(2021, 12, 5);
+        LocalDate d1 = LocalDate.now();*/
 
-        t.GetTollFee(c, list, d);
+        t.GetTollFee(c, list);
     }
 }

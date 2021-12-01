@@ -29,7 +29,7 @@ public class TollCalculatorTest {
         LocalDateTime e5 = LocalDateTime.of(2033, 11, 5, 15, 0, 0);
         LocalDateTime e6 = LocalDateTime.of(2033, 11, 5, 16, 30, 0);
         LocalDateTime e7 = LocalDateTime.of(2033, 11, 5, 16, 30, 0);
-        LocalDate d = LocalDate.now();
+
         List<LocalDateTime> list = new ArrayList<>() {
         };
         list.add(e3);
@@ -38,7 +38,7 @@ public class TollCalculatorTest {
         list.add(e6);
         list.add(e7);
 
-        t.GetTollFee(car, list, d);
+        t.GetTollFee(car, list);
         //t.GetTollFee(mc, list);
     }
 
@@ -85,7 +85,7 @@ public class TollCalculatorTest {
     }
 
     @Test
-    public void testVehicleTypeCMC() {
+    public void testVehicleTypeMC() {
         String c = "MC";
         String x = "Truck";
         String a = mc.GetVehicleType();
